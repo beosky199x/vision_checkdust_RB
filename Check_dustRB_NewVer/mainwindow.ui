@@ -1,0 +1,5153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupTitle">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1280</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox{
+	border: 0px solid rgb(10, 57, 167);
+    border-radius: 0px;
+	background-color:rgb(207, 219, 242);
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="lblTime">
+     <property name="geometry">
+      <rect>
+       <x>1125</x>
+       <y>0</y>
+       <width>151</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lao UI</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Lao UI&quot;;
+color: rgb(255, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-style:italic; color:#ff5500;&quot;&gt;Time&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>15</y>
+       <width>436</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="lblErrColorStain">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(0, 255, 255);
+color: rgb(0, 0, 0);
+border-radius: 5px;
+padding-left:5px;
+text-align: left;</string>
+        </property>
+        <property name="text">
+         <string>Stain</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="lblErrColor_WhiteStain">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: red;
+color: rgb(0, 0, 0);
+border-radius: 5px;
+padding-left:5px;
+text-align: left;</string>
+        </property>
+        <property name="text">
+         <string>White/Pink Stain</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="lblErrColorDust">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(128, 0, 128);
+color: rgb(0, 0, 0);
+border-radius: 5px;
+padding-left:5px;
+text-align: left;</string>
+        </property>
+        <property name="text">
+         <string>Dust</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="lblErrColorGray">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(0, 85, 127);
+color: rgb(0, 0, 0);
+border-radius: 5px;
+padding-left:5px;
+text-align: left;</string>
+        </property>
+        <property name="text">
+         <string>Color</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="lblErrColor_Glare">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: orange;
+color: rgb(0, 0, 0);
+border-radius: 5px;
+padding-left:5px;
+text-align: left;</string>
+        </property>
+        <property name="text">
+         <string>Glare</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="lblErrColor_Glare_3">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: blue;
+color: rgb(0, 0, 0);
+border-radius: 5px;
+padding-left:5px;
+text-align: left;</string>
+        </property>
+        <property name="text">
+         <string>Focus</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QToolButton" name="lblNameProject">
+     <property name="geometry">
+      <rect>
+       <x>-6</x>
+       <y>0</y>
+       <width>409</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 127);
+background-color: rgb(191, 189, 255);
+border-radius: 2px;
+</string>
+     </property>
+     <property name="text">
+      <string>VISION INSPECTION CAMERA</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>55</y>
+      <width>1275</width>
+      <height>671</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>600</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>true</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget::pane {
+   border-bottom: 1px solid darkgrey;
+   border-right: 1px solid darkgrey;
+ border-top: 1px solid darkgrey;
+   border-left: 1px solid darkgrey;
+}
+
+QTabBar::tab {
+  background-color: rgb(255, 255, 255);
+  width: 80px;
+  height: 60px;
+  color:white;
+}</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::South</enum>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>65</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="usesScrollButtons">
+     <bool>false</bool>
+    </property>
+    <property name="tabsClosable">
+     <bool>false</bool>
+    </property>
+    <property name="movable">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="tabAuto">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="mouseTracking">
+      <bool>false</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhNone</set>
+     </property>
+     <attribute name="icon">
+      <iconset resource="Icon.qrc">
+       <normaloff>:/Icon/Auto.JPG</normaloff>:/Icon/Auto.JPG</iconset>
+     </attribute>
+     <attribute name="title">
+      <string/>
+     </attribute>
+     <widget class="QTableWidget" name="tbwLogLeft">
+      <property name="geometry">
+       <rect>
+        <x>296</x>
+        <y>480</y>
+        <width>285</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 12px;</string>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::SelectedClicked</set>
+      </property>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+     </widget>
+     <widget class="QLabel" name="displayLeft">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>30</y>
+        <width>631</width>
+        <height>426</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>40</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(60, 120, 0);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="displayRight">
+      <property name="geometry">
+       <rect>
+        <x>639</x>
+        <y>30</y>
+        <width>630</width>
+        <height>426</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>40</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(60, 120, 0);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblMouse_3">
+      <property name="geometry">
+       <rect>
+        <x>2</x>
+        <y>2</y>
+        <width>626</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 170, 0);
+color:rgb(0, 0, 0);
+border-radius: 5px;
+</string>
+      </property>
+      <property name="text">
+       <string>Phone 1 - Left:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="btnStart">
+      <property name="geometry">
+       <rect>
+        <x>585</x>
+        <y>460</y>
+        <width>106</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QToolButton{
+		border: 2px green;
+        border-radius: 10px;
+        color:rgb(85, 255, 0);
+	background-color:rgb(13, 154, 51);
+padding-left:30px;
+
+}
+QToolButton:pressed
+{
+background-color:rgb(133, 246, 6);
+  color: black; 
+}
+</string>
+      </property>
+      <property name="text">
+       <string>START</string>
+      </property>
+      <property name="icon">
+       <iconset resource="Icon.qrc">
+        <normaloff>:/Icon/start.png</normaloff>:/Icon/start.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="btnStop">
+      <property name="geometry">
+       <rect>
+        <x>585</x>
+        <y>512</y>
+        <width>106</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QToolButton{
+		border: 2px red;
+        border-radius: 5px;
+        color:white; 
+	background-color:rgb(111, 19, 27);
+padding-left:30px
+}
+QToolButton:pressed
+{
+background-color:rgb(255, 0, 0);
+  color: black; 
+}</string>
+      </property>
+      <property name="text">
+       <string>STOP</string>
+      </property>
+      <property name="icon">
+       <iconset resource="Icon.qrc">
+        <normaloff>:/Icon/stop.png</normaloff>:/Icon/stop.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tbwLogRight">
+      <property name="geometry">
+       <rect>
+        <x>695</x>
+        <y>482</y>
+        <width>276</width>
+        <height>126</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 12px;</string>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::SelectedClicked</set>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="btnInital">
+      <property name="geometry">
+       <rect>
+        <x>585</x>
+        <y>562</y>
+        <width>106</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QToolButton{
+		border: 2px red;
+        border-radius: 5px;
+        color:rgb(255, 170, 0);
+	background-color:rgb(0, 85, 255);
+padding-left:30px
+}
+QToolButton:pressed
+{
+background-color:rgb(0, 0, 255);
+  color: black; 
+}</string>
+      </property>
+      <property name="text">
+       <string>Inital</string>
+      </property>
+      <property name="icon">
+       <iconset resource="Icon.qrc">
+        <normaloff>:/Icon/reset.png</normaloff>:/Icon/reset.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextBesideIcon</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblNameErrorTableLeft">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>460</y>
+        <width>290</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 85, 127);
+color:rgb(255, 255, 255);
+border-radius: 5px;
+padding-left:5px;
+border: 2px solid black;</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhMultiLine</set>
+      </property>
+      <property name="text">
+       <string>Error Table</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblMouse_4">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>3</y>
+        <width>626</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 170, 0);
+color:rgb(0, 0, 0);
+border-radius: 5px;
+</string>
+      </property>
+      <property name="text">
+       <string>Phone 2 - Right:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblNameLogTableLeft">
+      <property name="geometry">
+       <rect>
+        <x>295</x>
+        <y>460</y>
+        <width>286</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 85, 127);
+color:rgb(255, 255, 255);
+border-radius: 5px;
+padding-left:5px;
+border: 2px solid black;</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhMultiLine</set>
+      </property>
+      <property name="text">
+       <string>Log Table</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tbwErrorLeft">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>480</y>
+        <width>290</width>
+        <height>126</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="dragEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::NoSelection</enum>
+      </property>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <row>
+       <property name="text">
+        <string>IRIS</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>STAIN</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>WHITESTAIN</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>GLARE</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>FOCUS</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>COLOR</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>DARKSPORT</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>FW1 RESULT</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>FB1 RESULT</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLabel" name="lblNameLogTableRight">
+      <property name="geometry">
+       <rect>
+        <x>693</x>
+        <y>460</y>
+        <width>280</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 85, 127);
+color:rgb(255, 255, 255);
+border-radius: 5px;
+padding-left:5px;
+border: 2px solid black;</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhMultiLine</set>
+      </property>
+      <property name="text">
+       <string>Log Table</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblNameErrorTableRight">
+      <property name="geometry">
+       <rect>
+        <x>980</x>
+        <y>460</y>
+        <width>286</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 85, 127);
+color:rgb(255, 255, 255);
+border-radius: 5px;
+padding-left:5px;
+border: 2px solid black;</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhMultiLine</set>
+      </property>
+      <property name="text">
+       <string>Error Table</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tbwErrorRight">
+      <property name="geometry">
+       <rect>
+        <x>980</x>
+        <y>479</y>
+        <width>290</width>
+        <height>126</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 12px;</string>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <row>
+       <property name="text">
+        <string>IRIS</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>STAIN</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>WHITESTAIN</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>GLARE</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>FOCUS</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>COLOR</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>DARKSPORT</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>FW1 RESULT</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>FB1 RESULT</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabManual">
+     <attribute name="icon">
+      <iconset resource="Icon.qrc">
+       <normaloff>:/Icon/Manual.JPG</normaloff>:/Icon/Manual.JPG</iconset>
+     </attribute>
+     <attribute name="title">
+      <string/>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>10</y>
+        <width>611</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{
+border-radius: 9px;
+background-color:rgb(234, 234, 234);
+border: 1px solid gray;
+color: blue;
+}
+
+QGroupBox::title
+{
+subcontrol-origin:margin;
+left:10px;
+top:5px
+padding 0 6px 0 6px;
+color: blue;
+}
+</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>140</y>
+         <width>571</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="title">
+        <string>Transmit</string>
+       </property>
+       <widget class="QPushButton" name="btnSendCOM">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>95</y>
+          <width>161</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);</string>
+        </property>
+        <property name="text">
+         <string>Send</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icon.qrc">
+          <normaloff>:/Icon/start.png</normaloff>:/Icon/start.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cbbListFunction">
+        <property name="geometry">
+         <rect>
+          <x>65</x>
+          <y>40</y>
+          <width>321</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);padding-left:20px;</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Use UART by USB</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/next.png</normaloff>:/Icon/next.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Use UART by UART</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/back.png</normaloff>:/Icon/back.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Open Iris</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/ico00004.ico</normaloff>:/Icon/ico00004.ico</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Close Iris</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_On.ico</normaloff>:/Icon/Log_On.ico</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Open Front (Model 1 camera)</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/ico00004.ico</normaloff>:/Icon/ico00004.ico</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Close Front (Model 1 camera)</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_Off.png</normaloff>:/Icon/Log_Off.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Capture Front AF (Model 1 camera)</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/cap.png</normaloff>:/Icon/cap.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Capture Front uAF (Model 1 camera)</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/cap.png</normaloff>:/Icon/cap.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Open FW1 Camera(Model 2 Camera)</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/ico00004.ico</normaloff>:/Icon/ico00004.ico</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Open FB1 Camera(Model 2 Camera)</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_On.ico</normaloff>:/Icon/Log_On.ico</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Close Camera(Model 2 Camera)</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_Off.png</normaloff>:/Icon/Log_Off.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Captrue AF(Model 2 Camera)</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/cap.png</normaloff>:/Icon/cap.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Capture NOAF(Model 2 Camera)</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/cap.png</normaloff>:/Icon/cap.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Capture TRYAF(Model 2 Camera)</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/cap.png</normaloff>:/Icon/cap.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Home Screen</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/phone.png</normaloff>:/Icon/phone.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Lock Screen</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/ico00004.ico</normaloff>:/Icon/ico00004.ico</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Unlock Screen</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/ON.png</normaloff>:/Icon/ON.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>On Out_1 Modul IO</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_On.ico</normaloff>:/Icon/Log_On.ico</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Off Out_1 Modul IO</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_Off.png</normaloff>:/Icon/Log_Off.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>On Out_2 Modul IO</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_On.ico</normaloff>:/Icon/Log_On.ico</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Off Out_2 Modul IO</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_Off.png</normaloff>:/Icon/Log_Off.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>On Out_3 Modul IO</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_On.ico</normaloff>:/Icon/Log_On.ico</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Off Out_3 Modul IO</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_Off.png</normaloff>:/Icon/Log_Off.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>On Out_4 Modul IO</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_On.ico</normaloff>:/Icon/Log_On.ico</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Off Out_4 Modul IO</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_Off.png</normaloff>:/Icon/Log_Off.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>On Out_5 Modul IO</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_On.ico</normaloff>:/Icon/Log_On.ico</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Off Out_5 Modul IO</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_Off.png</normaloff>:/Icon/Log_Off.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>On Out_6 Modul IO</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_On.ico</normaloff>:/Icon/Log_On.ico</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Off Out_6 Modul IO</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_Off.png</normaloff>:/Icon/Log_Off.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>On Out_7 Modul IO</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_On.ico</normaloff>:/Icon/Log_On.ico</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Off Out_7 Modul IO</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/Log_Off.png</normaloff>:/Icon/Log_Off.png</iconset>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLineEdit" name="edtDataSendCom">
+        <property name="geometry">
+         <rect>
+          <x>65</x>
+          <y>95</y>
+          <width>321</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_20">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>55</y>
+          <width>47</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>List Cmd</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_21">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>100</y>
+          <width>36</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Data</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>285</y>
+         <width>571</width>
+         <height>301</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="title">
+        <string>Receiver</string>
+       </property>
+       <widget class="QPushButton" name="btnClearCOM">
+        <property name="geometry">
+         <rect>
+          <x>485</x>
+          <y>25</y>
+          <width>80</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);</string>
+        </property>
+        <property name="text">
+         <string>Clear</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tbwReceiverDataCom">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>25</y>
+          <width>466</width>
+          <height>271</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 12px;</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_4">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>571</width>
+         <height>106</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="title">
+        <string>COMPORT</string>
+       </property>
+       <widget class="QPushButton" name="btnCoDisComport">
+        <property name="geometry">
+         <rect>
+          <x>265</x>
+          <y>65</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);</string>
+        </property>
+        <property name="text">
+         <string>Open</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cbbListComport">
+        <property name="geometry">
+         <rect>
+          <x>67</x>
+          <y>25</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);padding-left:20px;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_31">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>35</y>
+          <width>47</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>COM</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cbbListBaudrate">
+        <property name="geometry">
+         <rect>
+          <x>67</x>
+          <y>65</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);padding-left:20px;</string>
+        </property>
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <property name="insertPolicy">
+         <enum>QComboBox::NoInsert</enum>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+        </property>
+        <item>
+         <property name="text">
+          <string>9600</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>19200</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>115200</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_32">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>75</y>
+          <width>47</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Baud rate</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnScanCOM">
+        <property name="geometry">
+         <rect>
+          <x>265</x>
+          <y>25</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);</string>
+        </property>
+        <property name="text">
+         <string>Scan COM</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnDisconnectAll">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>25</y>
+          <width>166</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);</string>
+        </property>
+        <property name="text">
+         <string>Close all 
+Comport</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="btnDeviceManeger">
+       <property name="geometry">
+        <rect>
+         <x>18</x>
+         <y>0</y>
+         <width>157</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Device manager</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>10</y>
+        <width>651</width>
+        <height>591</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <underline>true</underline>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox{
+border-radius: 9px;
+background-color:rgb(234, 234, 234);
+border: 1px solid gray;
+color: blue;
+}
+
+QGroupBox::title
+{
+subcontrol-origin:margin;
+left:10px;
+top:5px
+padding 0 6px 0 6px;
+color: blue;
+}
+</string>
+      </property>
+      <property name="title">
+       <string>ADB devices</string>
+      </property>
+      <widget class="QComboBox" name="cbbListDevices">
+       <property name="geometry">
+        <rect>
+         <x>75</x>
+         <y>140</y>
+         <width>171</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 127);padding-left:20px;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_33">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>145</y>
+         <width>56</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 255);</string>
+       </property>
+       <property name="text">
+        <string>ID devices</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnScanDevices">
+       <property name="geometry">
+        <rect>
+         <x>255</x>
+         <y>140</y>
+         <width>171</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 127);</string>
+       </property>
+       <property name="text">
+        <string>Scan Devices</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnSendADB">
+       <property name="geometry">
+        <rect>
+         <x>433</x>
+         <y>226</y>
+         <width>176</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 127);</string>
+       </property>
+       <property name="text">
+        <string>Send</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edtDataSendADB">
+       <property name="geometry">
+        <rect>
+         <x>75</x>
+         <y>226</y>
+         <width>351</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 127);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>230</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 255);</string>
+       </property>
+       <property name="text">
+        <string>Data</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="cbbListFunctionADB">
+       <property name="geometry">
+        <rect>
+         <x>75</x>
+         <y>185</y>
+         <width>351</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 127);padding-left:20px;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Get List</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icon.qrc">
+          <normaloff>:/Icon/next.png</normaloff>:/Icon/next.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pull to PC</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icon.qrc">
+          <normaloff>:/Icon/back.png</normaloff>:/Icon/back.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Remove folder</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icon.qrc">
+          <normaloff>:/Icon/step.jpg</normaloff>:/Icon/step.jpg</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Kill-server</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icon.qrc">
+          <normaloff>:/Icon/exit.png</normaloff>:/Icon/exit.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Check State Screen</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icon.qrc">
+          <normaloff>:/Icon/phone.png</normaloff>:/Icon/phone.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Unlock Phone</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icon.qrc">
+          <normaloff>:/Icon/Log_On.ico</normaloff>:/Icon/Log_On.ico</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Lock Phone</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icon.qrc">
+          <normaloff>:/Icon/ON.png</normaloff>:/Icon/ON.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Remove Log</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icon.qrc">
+          <normaloff>:/Icon/step.jpg</normaloff>:/Icon/step.jpg</iconset>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_34">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>191</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 255);</string>
+       </property>
+       <property name="text">
+        <string>List Cmd</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="horizontalLayoutWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>75</x>
+         <y>55</y>
+         <width>526</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QPushButton" name="btnOpenATK">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 127);</string>
+          </property>
+          <property name="text">
+           <string>Open img</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnDelATK">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 127);</string>
+          </property>
+          <property name="text">
+           <string>Del img</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnDelLog">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 0, 127);</string>
+          </property>
+          <property name="text">
+           <string>Del Log</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="horizontalLayoutWidget_5">
+       <property name="geometry">
+        <rect>
+         <x>74</x>
+         <y>95</y>
+         <width>351</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QPushButton" name="btnADBKillserver">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>Kill Server</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnADBCMD">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 0, 0);</string>
+          </property>
+          <property name="text">
+           <string>ADB cmd</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>284</y>
+         <width>631</width>
+         <height>301</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Receiver</string>
+       </property>
+       <widget class="QTableWidget" name="tbwReceiverDataCmd">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>521</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 12px;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnClearCMD">
+        <property name="geometry">
+         <rect>
+          <x>540</x>
+          <y>30</y>
+          <width>81</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);</string>
+        </property>
+        <property name="text">
+         <string>Clear</string>
+        </property>
+       </widget>
+      </widget>
+      <zorder>groupBox_6</zorder>
+      <zorder>cbbListDevices</zorder>
+      <zorder>label_33</zorder>
+      <zorder>btnScanDevices</zorder>
+      <zorder>btnSendADB</zorder>
+      <zorder>edtDataSendADB</zorder>
+      <zorder>label_26</zorder>
+      <zorder>cbbListFunctionADB</zorder>
+      <zorder>label_34</zorder>
+      <zorder>horizontalLayoutWidget_4</zorder>
+      <zorder>horizontalLayoutWidget_5</zorder>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabTeach">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <attribute name="icon">
+      <iconset resource="Icon.qrc">
+       <normaloff>:/Icon/Teach.JPG</normaloff>:/Icon/Teach.JPG</iconset>
+     </attribute>
+     <attribute name="title">
+      <string/>
+     </attribute>
+     <widget class="QWidget" name="gridLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1267</width>
+        <height>606</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="1" column="0">
+        <layout class="QGridLayout" name="gridLayout_14">
+         <item row="0" column="0">
+          <widget class="QLabel" name="display">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(85, 128, 0);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <layout class="QGridLayout" name="gridLayout_12">
+           <item row="0" column="2">
+            <widget class="QProgressBar" name="progressBar">
+             <property name="value">
+              <number>24</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="btnStopSimulator">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>35</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 127);</string>
+             </property>
+             <property name="text">
+              <string>Stop Simu</string>
+             </property>
+             <property name="icon">
+              <iconset resource="Icon.qrc">
+               <normaloff>:/Icon/function.png</normaloff>:/Icon/function.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>45</width>
+               <height>45</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QPushButton" name="btnStartSimulator">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>35</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 127);</string>
+             </property>
+             <property name="text">
+              <string>Start Simu</string>
+             </property>
+             <property name="icon">
+              <iconset resource="Icon.qrc">
+               <normaloff>:/Icon/function.png</normaloff>:/Icon/function.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>45</width>
+               <height>45</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="7" column="2">
+        <layout class="QGridLayout" name="gridLayout_10">
+         <item row="0" column="1">
+          <widget class="QPushButton" name="btnOpenClear">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 127);</string>
+           </property>
+           <property name="text">
+            <string>Clear Log</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/Icon/exit.png</normaloff>:/Icon/exit.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="btnOpenDebug">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 127);</string>
+           </property>
+           <property name="text">
+            <string>Debug Folder</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>Icon/images.jpg</normaloff>Icon/images.jpg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="2">
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="3" column="0">
+          <widget class="QTableWidget" name="tbwLogTestManual">
+           <property name="styleSheet">
+            <string notr="true">border-radius: 12px;</string>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::SelectedClicked</set>
+           </property>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>1000</number>
+           </attribute>
+           <attribute name="horizontalHeaderMinimumSectionSize">
+            <number>500</number>
+           </attribute>
+           <attribute name="verticalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="1" column="0">
+            <widget class="QLabel" name="lblMouse_7">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(85, 0, 0);
+color:rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>Camera Check</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="lblMouse_9">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(85, 0, 0);
+color:rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>Size Check</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="lblMouse_10">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(85, 0, 0);
+color:rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>Save Img handle</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="cbbSelectParameterCheckManual">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 0, 0);
+</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>20</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>LEFT</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Icon.qrc">
+                <normaloff>:/Icon/1.ico</normaloff>:/Icon/1.ico</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>RIGHT</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Icon.qrc">
+                <normaloff>:/Icon/2.ico</normaloff>:/Icon/2.ico</iconset>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="cbbSelectCamToCheck">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 0, 0);
+</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>20</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>FW1</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Icon.qrc">
+                <normaloff>:/Icon/1.ico</normaloff>:/Icon/1.ico</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>FW2</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Icon.qrc">
+                <normaloff>:/Icon/2.ico</normaloff>:/Icon/2.ico</iconset>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="lblMouse_11">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(85, 0, 0);
+color:rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>Simulation Mode</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="cbbSelectSizeCheckManual">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 0, 0);
+</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>20</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>Small</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Icon.qrc">
+                <normaloff>:/Icon/1.ico</normaloff>:/Icon/1.ico</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Large</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Icon.qrc">
+                <normaloff>:/Icon/2.ico</normaloff>:/Icon/2.ico</iconset>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="lblMouse_12">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(85, 0, 0);
+color:rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>Parameter Check</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <layout class="QGridLayout" name="gridLayout_7"/>
+           </item>
+           <item row="3" column="1">
+            <widget class="QCheckBox" name="manualDebug">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 127);</string>
+             </property>
+             <property name="text">
+              <string>Use/UnUse</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <layout class="QGridLayout" name="gridLayout_9">
+             <item row="0" column="0">
+              <widget class="QCheckBox" name="manualSimulation">
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(0, 0, 127);</string>
+               </property>
+               <property name="text">
+                <string>Use/UnUse</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLineEdit" name="txt_delay"/>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>Delay:</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="2">
+          <widget class="QLineEdit" name="edtPath">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <italic>true</italic>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 85, 0);</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_2">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Path</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="lblMouse">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(85, 0, 0);
+color:rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Mouse</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="btnLoad">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 127);</string>
+           </property>
+           <property name="text">
+            <string>LOAD</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="7" column="0">
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="5">
+          <widget class="QPushButton" name="btnCheckDarkspot">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 127);</string>
+           </property>
+           <property name="text">
+            <string>DarkSport</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/Icon/function.png</normaloff>:/Icon/function.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>45</width>
+             <height>45</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QPushButton" name="btnCheckWrongColor">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 127);</string>
+           </property>
+           <property name="text">
+            <string>Color</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/Icon/function.png</normaloff>:/Icon/function.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>45</width>
+             <height>45</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="btnCheckGlare">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 127);</string>
+           </property>
+           <property name="text">
+            <string>Glare</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/Icon/function.png</normaloff>:/Icon/function.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>45</width>
+             <height>45</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="btnCheckFocus">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 127);</string>
+           </property>
+           <property name="text">
+            <string>Focus</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/Icon/function.png</normaloff>:/Icon/function.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>45</width>
+             <height>45</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="btnCheckWhiteStain">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 127);</string>
+           </property>
+           <property name="text">
+            <string>W.Stain</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/Icon/function.png</normaloff>:/Icon/function.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>45</width>
+             <height>45</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="btnCheckStain">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 127);</string>
+           </property>
+           <property name="text">
+            <string>Stain</string>
+           </property>
+           <property name="icon">
+            <iconset resource="Icon.qrc">
+             <normaloff>:/Icon/function.png</normaloff>:/Icon/function.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>45</width>
+             <height>45</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="icon">
+      <iconset resource="Icon.qrc">
+       <normaloff>:/Icon/Data.JPG</normaloff>:/Icon/Data.JPG</iconset>
+     </attribute>
+     <attribute name="title">
+      <string/>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_12">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>721</width>
+        <height>596</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="title">
+       <string>Setting Shocket:</string>
+      </property>
+      <widget class="QGroupBox" name="groupBoxDarkSport_5">
+       <property name="geometry">
+        <rect>
+         <x>4</x>
+         <y>170</y>
+         <width>356</width>
+         <height>426</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="title">
+        <string>Socket1 - Left</string>
+       </property>
+       <widget class="QCheckBox" name="checkBoxUseLeft">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>5</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: green;</string>
+        </property>
+        <property name="text">
+         <string>Use</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtComLeft">
+        <property name="geometry">
+         <rect>
+          <x>86</x>
+          <y>21</y>
+          <width>104</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtIDLeft">
+        <property name="geometry">
+         <rect>
+          <x>86</x>
+          <y>47</y>
+          <width>261</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtKeyStartLeft">
+        <property name="geometry">
+         <rect>
+          <x>86</x>
+          <y>73</y>
+          <width>104</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtInputFolderLeft">
+        <property name="geometry">
+         <rect>
+          <x>86</x>
+          <y>100</y>
+          <width>261</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtOutputFolderLeft">
+        <property name="geometry">
+         <rect>
+          <x>86</x>
+          <y>126</y>
+          <width>261</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtPhoneFolderLeft">
+        <property name="geometry">
+         <rect>
+          <x>86</x>
+          <y>152</y>
+          <width>261</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_107">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>21</y>
+          <width>60</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Comport</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_108">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>48</y>
+          <width>16</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_109">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>74</y>
+          <width>60</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(170, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Key Start</string>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="lblSk1_folderPhone">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>150</y>
+          <width>80</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+background-color: rgb(191, 189, 255);
+border-radius: 2px;
+</string>
+        </property>
+        <property name="text">
+         <string>Folder Phone</string>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="lblSk1_folderOut">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>125</y>
+          <width>80</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+background-color: rgb(191, 189, 255);
+border-radius: 2px;
+</string>
+        </property>
+        <property name="text">
+         <string>Folder Output</string>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="lblSk1_folderIn">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>100</y>
+          <width>80</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+background-color: rgb(191, 189, 255);
+border-radius: 2px;
+</string>
+        </property>
+        <property name="text">
+         <string>Folder Input</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtComportIO_Left">
+        <property name="geometry">
+         <rect>
+          <x>85</x>
+          <y>270</y>
+          <width>104</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_116">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>270</y>
+          <width>60</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Comport IO</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBoxUseComportIO_Left">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>272</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: green;</string>
+        </property>
+        <property name="text">
+         <string>Use</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_119">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>185</y>
+          <width>60</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(170, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Model</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cbbSelectModel_Left">
+        <property name="geometry">
+         <rect>
+          <x>85</x>
+          <y>185</y>
+          <width>261</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);
+</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBoxDarkSport_6">
+       <property name="geometry">
+        <rect>
+         <x>362</x>
+         <y>170</y>
+         <width>356</width>
+         <height>426</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="title">
+        <string>Socket2 - Right</string>
+       </property>
+       <widget class="QCheckBox" name="checkBoxUseRight">
+        <property name="geometry">
+         <rect>
+          <x>105</x>
+          <y>5</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: green;</string>
+        </property>
+        <property name="text">
+         <string>Use</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtComRight">
+        <property name="geometry">
+         <rect>
+          <x>86</x>
+          <y>21</y>
+          <width>104</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtIDRight">
+        <property name="geometry">
+         <rect>
+          <x>86</x>
+          <y>47</y>
+          <width>261</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtKeyStartRight">
+        <property name="geometry">
+         <rect>
+          <x>86</x>
+          <y>73</y>
+          <width>104</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtInputFolderRight">
+        <property name="geometry">
+         <rect>
+          <x>86</x>
+          <y>98</y>
+          <width>261</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtOutputFolderRight">
+        <property name="geometry">
+         <rect>
+          <x>86</x>
+          <y>124</y>
+          <width>261</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtPhoneFolderRight">
+        <property name="geometry">
+         <rect>
+          <x>86</x>
+          <y>150</y>
+          <width>261</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_110">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>21</y>
+          <width>60</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Comport</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_111">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>48</y>
+          <width>16</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_112">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>74</y>
+          <width>60</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(170, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Key Start</string>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="lblSk2_folderPhone">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>150</y>
+          <width>80</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+background-color: rgb(191, 189, 255);
+border-radius: 2px;
+</string>
+        </property>
+        <property name="text">
+         <string>Folder Phone</string>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="lblSk2_folderOut">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>125</y>
+          <width>80</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+background-color: rgb(191, 189, 255);
+border-radius: 2px;
+</string>
+        </property>
+        <property name="text">
+         <string>Folder Output</string>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="lblSk2_folderIn">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>100</y>
+          <width>80</width>
+          <height>19</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+background-color: rgb(191, 189, 255);
+border-radius: 2px;
+</string>
+        </property>
+        <property name="text">
+         <string>Folder Input</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_117">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>268</y>
+          <width>60</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Comport IO</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtComportIO_Right">
+        <property name="geometry">
+         <rect>
+          <x>85</x>
+          <y>268</y>
+          <width>104</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBoxUseComportIO_Right">
+        <property name="geometry">
+         <rect>
+          <x>202</x>
+          <y>270</y>
+          <width>70</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: green;</string>
+        </property>
+        <property name="text">
+         <string>Use</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_118">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>185</y>
+          <width>60</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(170, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Model</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cbbSelectModel_Right">
+        <property name="geometry">
+         <rect>
+          <x>85</x>
+          <y>185</y>
+          <width>261</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 255);
+</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QToolButton" name="btnOpenLogFolder">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>55</y>
+         <width>60</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 127);
+background-color: rgb(191, 189, 255);
+border-radius: 2px;
+</string>
+       </property>
+       <property name="text">
+        <string>Log folder</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelVerSion">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>25</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 255);</string>
+       </property>
+       <property name="text">
+        <string>Version</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edtVersion">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>25</y>
+         <width>636</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 255);</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="edtFolderLog">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>55</y>
+         <width>636</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string extracomment="09032019"/>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="cbSaveImageResize">
+       <property name="geometry">
+        <rect>
+         <x>78</x>
+         <y>90</y>
+         <width>637</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save Image ReSize</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_11">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>5</y>
+        <width>541</width>
+        <height>596</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Parameter: </string>
+      </property>
+      <widget class="QTreeWidget" name="treeWidget_Parameter">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>3</x>
+         <y>20</y>
+         <width>410</width>
+         <height>576</height>
+        </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::ClickFocus</enum>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::ActionsContextMenu</enum>
+       </property>
+       <property name="toolTipDuration">
+        <number>1</number>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(255, 255, 127);
+border-top-color: rgb(85, 255, 127);
+border-left-color: rgb(85, 255, 0);</string>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::ImhNone</set>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="midLineWidth">
+        <number>1</number>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+       </property>
+       <property name="autoScrollMargin">
+        <number>100</number>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="tabKeyNavigation">
+        <bool>false</bool>
+       </property>
+       <property name="showDropIndicator" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="dragDropOverwriteMode">
+        <bool>false</bool>
+       </property>
+       <property name="dragDropMode">
+        <enum>QAbstractItemView::NoDragDrop</enum>
+       </property>
+       <property name="defaultDropAction">
+        <enum>Qt::IgnoreAction</enum>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::NoSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <property name="verticalScrollMode">
+        <enum>QAbstractItemView::ScrollPerItem</enum>
+       </property>
+       <property name="horizontalScrollMode">
+        <enum>QAbstractItemView::ScrollPerItem</enum>
+       </property>
+       <property name="autoExpandDelay">
+        <number>-1</number>
+       </property>
+       <property name="rootIsDecorated">
+        <bool>true</bool>
+       </property>
+       <property name="uniformRowHeights">
+        <bool>false</bool>
+       </property>
+       <property name="animated">
+        <bool>true</bool>
+       </property>
+       <property name="allColumnsShowFocus">
+        <bool>true</bool>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="headerHidden">
+        <bool>false</bool>
+       </property>
+       <attribute name="headerCascadingSectionResizes">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="headerDefaultSectionSize">
+        <number>250</number>
+       </attribute>
+       <attribute name="headerHighlightSections">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="headerMinimumSectionSize">
+        <number>25</number>
+       </attribute>
+       <attribute name="headerShowSortIndicator" stdset="0">
+        <bool>true</bool>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>Property</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignLeading|AlignVCenter</set>
+        </property>
+        <property name="background">
+         <color>
+          <red>89</red>
+          <green>15</green>
+          <blue>200</blue>
+         </color>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Value</string>
+        </property>
+        <property name="background">
+         <color>
+          <red>0</red>
+          <green>0</green>
+          <blue>127</blue>
+         </color>
+        </property>
+       </column>
+       <item>
+        <property name="text">
+         <string>CAMERA SETTING</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Option fuction</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>Show Image Result</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Save Image Result</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Check Iris</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>CheckStain</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Check WhiteStain</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Check Glare</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Check Focus</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Check Color</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Check DarkSport</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Captrue AF</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>DELAY TIME</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>Send UART_USB</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wait_UART_USB</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Send Home Screen</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wait Home Screen</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Send Open Iris</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wait Open Iris</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Send Close Iris</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wait Close Iris</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Send Open FW1</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wait Open FW1</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Send Close FW1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wait Close FW1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Send Open FB1</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Close Open FB1</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Send Close FB1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wait Close FB1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Send Capture NoAF</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wait Capture NoAF</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Send Capture AF</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wait Capture AF</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Send Capture TryAF</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wait Capture TryAF</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Send Get List</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wait Get List</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Send Pull 2 PC</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wait Pull 2 PC</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Send Remove Folder</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wait Remove Folder</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Clynder ForWard</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Clynder BackWard</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>Parameter Paint</string>
+        </property>
+        <property name="font">
+         <font>
+          <stylestrategy>PreferAntialias</stylestrategy>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>Thickness</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Offset</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>Parameter Normalize</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>Type</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Beta</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Alpha</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>Parameter Check Stain</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>Threshold</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Block Size</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Blur Size</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Erode Size</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Erode Loop</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Dilate Size</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Dilate Loop</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Remove Edge</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Remove Conner</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Area</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Width</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Height</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>Parameter Check WhiteStain</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>Threshold</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Block Size</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Blur Size</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Erode Size</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Erode Loop</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Dilate Size</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Dilate Loop</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Remove Edge</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Remove Conner</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Area</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Width</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Height</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>Parameter Check Glare</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>Threshold</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Blur Size</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Roi </string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Erode Size</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Erode Loop</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Dilate Size</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Dilate Loop</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Remove Edge</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Remove Conner</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Mean </string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Area Roi</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Width Roi </string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Height Roi </string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>Parameter Check Focus</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>Roi Check 1</string>
+         </property>
+         <property name="toolTip">
+          <string extracomment="(x,y,width,height)"/>
+         </property>
+         <property name="statusTip">
+          <string extracomment="(x,y,width,height)"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Roi Check 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Roi Check 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Roi Check 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Roi Check 5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Roi Check 6</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Std Roi 1</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Std Roi 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Std Roi 3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Std Roi 4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Std Roi 5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filter Std Roi 6</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>Parameter Check Darksport</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>Threshold</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Block Size</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Filt Area</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>Parameter Check Wrong Color</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <item>
+         <property name="text">
+          <string>Mean Red</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Mean Green</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Mean Blue</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>AT Command</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>UART_USB</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <item>
+          <property name="text">
+           <string>Send</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Respone</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>HOME_SCREEN</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Respone</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>OPEN_IRIS</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Respone</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>CLOSE_IRIS</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Respone</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>OPEN_FW`1</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Respome</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>CLOSE_FW1</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Respone</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>OPEN_FB1</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Respone</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>CLOSE_FB1</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Respone</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>CAPTURE_NOAF</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Respone</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>CAPTURE_AF</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Respone</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>CAPTURE_TRYAF</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Respone</string>
+          </property>
+         </item>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>ADB Command</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>GET_LIST</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Respone</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>PULL_2_PC</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Respone</string>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>REMOVE_FOLDER</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Respone</string>
+          </property>
+         </item>
+        </item>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="btnSave">
+       <property name="geometry">
+        <rect>
+         <x>415</x>
+         <y>75</y>
+         <width>120</width>
+         <height>56</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 127);</string>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+       <property name="icon">
+        <iconset resource="Icon.qrc">
+         <normaloff>:/Icon/save.png</normaloff>:/Icon/save.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="cbbSelectModel">
+       <property name="geometry">
+        <rect>
+         <x>415</x>
+         <y>20</y>
+         <width>120</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 255);
+</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBoxDarkSport_9">
+       <property name="geometry">
+        <rect>
+         <x>416</x>
+         <y>140</y>
+         <width>121</width>
+         <height>456</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox{
+border-radius: 9px;
+background-color:rgb(234, 234, 234);
+border: 1px solid gray;
+color: blue;
+}
+
+QGroupBox::title
+{
+subcontrol-origin:margin;
+left:10px;
+top:5px
+padding 0 6px 0 6px;
+color: blue;
+}
+</string>
+       </property>
+       <property name="title">
+        <string>Folder Image</string>
+       </property>
+       <widget class="QPushButton" name="btnClearFolderOutput">
+        <property name="geometry">
+         <rect>
+          <x>8</x>
+          <y>70</y>
+          <width>106</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);</string>
+        </property>
+        <property name="text">
+         <string>Folder
+Output</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icon.qrc">
+          <normaloff>:/Icon/exit.png</normaloff>:/Icon/exit.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnClearFolderPhone">
+        <property name="geometry">
+         <rect>
+          <x>8</x>
+          <y>125</y>
+          <width>106</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);</string>
+        </property>
+        <property name="text">
+         <string>Folder
+Phone</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Icon.qrc">
+          <normaloff>:/Icon/exit.png</normaloff>:/Icon/exit.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cbbSelectSideToDel">
+        <property name="geometry">
+         <rect>
+          <x>8</x>
+          <y>25</y>
+          <width>106</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 0, 0);
+</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>20</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>LEFT</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/back.png</normaloff>:/Icon/back.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RIGHT</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/next.png</normaloff>:/Icon/next.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>LEFT2</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/back.png</normaloff>:/Icon/back.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RIGHT2</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/next.png</normaloff>:/Icon/next.png</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>All folder</string>
+         </property>
+         <property name="icon">
+          <iconset resource="Icon.qrc">
+           <normaloff>:/Icon/ON.png</normaloff>:/Icon/ON.png</iconset>
+         </property>
+        </item>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="icon">
+      <iconset resource="Icon.qrc">
+       <normaloff>:/Icon/Manual.JPG</normaloff>:/Icon/Manual.JPG</iconset>
+     </attribute>
+     <attribute name="title">
+      <string/>
+     </attribute>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>54</x>
+        <y>20</y>
+        <width>1159</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox_7">
+         <property name="title">
+          <string>Left - IO</string>
+         </property>
+         <widget class="QWidget" name="verticalLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>12</x>
+            <y>30</y>
+            <width>553</width>
+            <height>521</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QPushButton" name="btn_clynderFWD_left">
+             <property name="text">
+              <string>Clynder FWD</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_clynderMID_left">
+             <property name="text">
+              <string>Clynder MID</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_clynderBWD_left">
+             <property name="text">
+              <string>Clynder BWD</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_ledON_left">
+             <property name="text">
+              <string>Led ON</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_ledOFF_left">
+             <property name="text">
+              <string>Led OFF</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QGroupBox" name="groupBox_8">
+         <property name="title">
+          <string>Right - IO</string>
+         </property>
+         <widget class="QWidget" name="verticalLayoutWidget_2">
+          <property name="geometry">
+           <rect>
+            <x>12</x>
+            <y>30</y>
+            <width>553</width>
+            <height>521</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QPushButton" name="btn_clynderFWD_right">
+             <property name="text">
+              <string>Clynder FWD</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_clynderMID_right">
+             <property name="text">
+              <string>Clynder MID</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_clynderBWD_right">
+             <property name="text">
+              <string>Clynder BWD</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_ledON_right">
+             <property name="text">
+              <string>Led ON</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_ledOFF_right">
+             <property name="text">
+              <string>Led OFF</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>btnSendCOM</tabstop>
+  <tabstop>cbbListFunction</tabstop>
+  <tabstop>edtDataSendCom</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>tbwLogLeft</tabstop>
+  <tabstop>btnStart</tabstop>
+  <tabstop>btnStop</tabstop>
+  <tabstop>tbwLogRight</tabstop>
+  <tabstop>btnInital</tabstop>
+  <tabstop>cbbListComport</tabstop>
+  <tabstop>cbbListBaudrate</tabstop>
+  <tabstop>btnScanCOM</tabstop>
+  <tabstop>edtDataSendADB</tabstop>
+  <tabstop>tbwReceiverDataCmd</tabstop>
+  <tabstop>btnSendADB</tabstop>
+  <tabstop>btnClearCMD</tabstop>
+  <tabstop>btnOpenATK</tabstop>
+  <tabstop>btnDelATK</tabstop>
+  <tabstop>btnDelLog</tabstop>
+  <tabstop>edtPath</tabstop>
+  <tabstop>cbbListFunctionADB</tabstop>
+  <tabstop>tbwReceiverDataCom</tabstop>
+  <tabstop>btnCoDisComport</tabstop>
+  <tabstop>btnClearCOM</tabstop>
+  <tabstop>btnCheckStain</tabstop>
+  <tabstop>btnLoad</tabstop>
+  <tabstop>manualDebug</tabstop>
+  <tabstop>cbbSelectCamToCheck</tabstop>
+  <tabstop>btnDisconnectAll</tabstop>
+  <tabstop>cbbListDevices</tabstop>
+  <tabstop>btnScanDevices</tabstop>
+ </tabstops>
+ <resources>
+  <include location="Icon.qrc"/>
+ </resources>
+ <connections/>
+</ui>

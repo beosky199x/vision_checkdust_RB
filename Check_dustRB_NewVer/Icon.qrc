@@ -1,0 +1,79 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Icon/4.ico</file>
+        <file>Icon/3.ico</file>
+        <file>Icon/2.ico</file>
+        <file>Icon/1.ico</file>
+        <file>Icon/left.ico</file>
+        <file>Icon/right.ico</file>
+        <file>Icon/org1.png</file>
+        <file>Icon/org2.png</file>
+        <file>Icon/Vietnam.png</file>
+        <file>Icon/SQL.jpg</file>
+        <file>Icon/exit.png</file>
+        <file>Icon/Logo.png</file>
+        <file>Icon/box.PNG</file>
+        <file>Icon/circle1.png</file>
+        <file>Icon/org3.png</file>
+        <file>Icon/go-up-256.png</file>
+        <file>Icon/ON.png</file>
+        <file>Icon/go-down-256.png</file>
+        <file>Icon/OFF.png</file>
+        <file>Icon/up.png</file>
+        <file>Icon/setting1.png</file>
+        <file>Icon/setting.png</file>
+        <file>Icon/conveyor.png</file>
+        <file>Icon/turn.png</file>
+        <file>Icon/stop.png</file>
+        <file>Icon/Manual.JPG</file>
+        <file>Icon/Help.JPG</file>
+        <file>Icon/Teach.JPG</file>
+        <file>Icon/Auto.JPG</file>
+        <file>Icon/Data.JPG</file>
+        <file>Icon/back.png</file>
+        <file>Icon/Log.JPG</file>
+        <file>Icon/home_pos.png</file>
+        <file>Icon/conveyor1.png</file>
+        <file>Icon/ERROR.bmp</file>
+        <file>Icon/download.png</file>
+        <file>Icon/upload.png</file>
+        <file>Icon/start.png</file>
+        <file>Icon/connect.png</file>
+        <file>Icon/reset.png</file>
+        <file>Icon/go straight.png</file>
+        <file>Icon/save.png</file>
+        <file>Icon/exit.jpg</file>
+        <file>Icon/Speed.ico</file>
+        <file>Icon/MC.ico</file>
+        <file>Icon/DSTG.ico</file>
+        <file>Icon/next1.png</file>
+        <file>Icon/next.png</file>
+        <file>Icon/RunMode.ico</file>
+        <file>Icon/org.png</file>
+        <file>Icon/down_pos.png</file>
+        <file>Icon/JUST SOME PIXELS ICON_.jpg</file>
+        <file>Icon/smooth_metal_png program-folder_yellow.jpg</file>
+        <file>Icon/up_pos.png</file>
+        <file>Icon/Line.jpg</file>
+        <file>Icon/refresh.png</file>
+        <file>Icon/green_ville_1 documents_yellow_edit_yellow.jpg</file>
+        <file>Icon/MMR.jpg</file>
+        <file>Icon/add.png</file>
+        <file>Icon/step.jpg</file>
+        <file>Icon/Log_On.ico</file>
+        <file>Icon/Speed.jpg</file>
+        <file>Icon/Simple Remix Bitmap Image.bmp</file>
+        <file>Icon/PID.bmp</file>
+        <file>Icon/RFID.ico</file>
+        <file>Icon/function.png</file>
+        <file>Icon/Log_Off.png</file>
+        <file>Icon/ico00004.ico</file>
+        <file>Icon/dot1.ico</file>
+        <file>Icon/cap.png</file>
+        <file>Icon/live.png</file>
+        <file>Icon/load.png</file>
+        <file>Icon/phone.png</file>
+        <file>Icon/train.png</file>
+        <file>Icon/vision.png</file>
+    </qresource>
+</RCC>
