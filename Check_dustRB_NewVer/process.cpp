@@ -4,6 +4,9 @@
 /*=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=*/
 //ProcessCheckComIO - ProcessCheckComIO
 //ProcessCheckComIO
+
+
+
 ProcessCheckComIO::ProcessCheckComIO(QObject *parent) : QThread(parent) {
 
     m_bRun = false;
@@ -534,6 +537,7 @@ void ThreadIO::ErrorComportIO(QSerialPort::SerialPortError serialPortError)
 
 //Process Simulation
 processSimulation::processSimulation(QObject *parent) : QThread(parent) {
+
 
     status = THREAD_NONE;
     m_bRun = false;

@@ -83,7 +83,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent,Qt::Window), ui(new
 
     connect(this, SIGNAL(eDisplay_Image(Mat,int)), this, SLOT(Display_Image(Mat,int)));
     connect(this, SIGNAL(eAddLogTestManual(QString,QColor)), this, SLOT(AddLogTestManual(QString,QColor)));
-     connect(ui->tbwLogTestManual, SIGNAL(cellClicked(int, int)), this, SLOT(showImageWhenClick(int, int)));
+    connect(ui->tbwLogTestManual, SIGNAL(cellClicked(int, int)), this, SLOT(showImageWhenClick(int, int)));
+    connect(this, SIGNAL(esetValueProcessBar(int)), this, SLOT(setValueProcessBar(int)));
 
     QObject::connect(Simulation, SIGNAL(threadsimulation(int,int,QStringList)), this, SLOT(simulatorVision(int,int,QStringList)));
 
@@ -323,6 +324,11 @@ QJsonDocument MainWindow::loadJson(QString fileName) {
     QFile jsonFile(fileName);
     jsonFile.open(QFile::ReadOnly);
     return QJsonDocument().fromJson(jsonFile.readAll());
+}
+
+void MainWindow::setValueProcessBar(int iValue)
+{
+    ui->progressBar->setValue(iValue);
 }
 
 void MainWindow::SaveDataGeneral() {
@@ -1680,7 +1686,6 @@ void MainWindow::simulatorVision(int iCam, int iModel, QStringList listImage)
 {
     ui->tbwLogTestManual->clearContents();
     ui->tbwLogTestManual->setRowCount(listImage.size());
-
     mRes.clear();
     mRes.resize(listImage.size());
     ui->progressBar->setRange(0,listImage.size());
@@ -1700,6 +1705,8 @@ void MainWindow::simulatorVision(int iCam, int iModel, QStringList listImage)
 
         QString name = ui->edtPath->text() +"/"+ filename;
         mIn = cv::imread(name.toStdString());
+
+        if(mIn.empty()) continue;
 
         if(mGeneral[iModel].bOptCheckStain[iCam])
             for(int i = TYPE_SIZE_SMALL; i<= TYPE_SIZE_LARGE; i++){
@@ -1745,18 +1752,16 @@ void MainWindow::simulatorVision(int iCam, int iModel, QStringList listImage)
             }
 
             for(Rect r : stResWStain[TYPE_SIZE_SMALL].vRes){
-                cv::rectangle(mOut, r, cv_red,    mGeneral[iModel].ipPaintThickness);
+                cv::rectangle(mOut, r, cv_red, mGeneral[iModel].ipPaintThickness);
             }
 
-
             for(Rect r : stResWStain[TYPE_SIZE_LARGE].vRes){
-                cv::rectangle(mOut, r, cv_red,    mGeneral[iModel].ipPaintThickness);
+                cv::rectangle(mOut, r, cv_red, mGeneral[iModel].ipPaintThickness);
             }
 
             for(Rect r : stDarkSport.vRes){
                 cv::rectangle(mOut, r, cv_purple, mGeneral[iModel].ipPaintThickness);
             }
-
 
             for(Rect r : stGlare.vRes){
                 cv::rectangle(mOut, r, cv_orange, mGeneral[iModel].ipPaintThickness);
@@ -1782,7 +1787,7 @@ void MainWindow::simulatorVision(int iCam, int iModel, QStringList listImage)
 
 
         QThread::msleep(iDelay);
-        ui->progressBar->setValue(i);
+        emit esetValueProcessBar(i);
 
     }
 
@@ -3046,7 +3051,7 @@ void MainWindow::VisionWhiteLStain(int iCode) {
         AddLogTestManual("White Large Size Stain checking");
         QString path = ui->edtPath->text();
         QString strFileName = qdCurTime.currentDateTime().toString("dd-MM-yyyy_hhmmss_") + path.split("/").last();
-        _sResVision sRes = fVision.CheckWhiteStain(mPattern,mGeneral[iPara],iCam,TYPE_SIZE_SMALL,strFileName,bDebug);
+        _sResVision sRes = fVision.CheckWhiteStain(mPattern,mGeneral[iPara],iCam,TYPE_SIZE_LARGE,strFileName,bDebug);
         if(sRes.bRes) {
             putText(sRes.mRes, "OK", Point(200,200), CV_FONT_HERSHEY_COMPLEX, 5.5, cv_green, 5);
             AddLogTestManual("Large WhiteStain OK");

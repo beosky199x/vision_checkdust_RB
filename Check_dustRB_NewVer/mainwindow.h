@@ -178,8 +178,10 @@ signals:
     void currentIndexChanged(int iInDex);
     void eAddLogTestManual(QString str, QColor iColor = Qt::blue);
     void eDisplay_Image(Mat Image, int iLabel);
+    void esetValueProcessBar(int iValue);
 public slots:
 
+    void setValueProcessBar(int iValue);
     void showImageWhenClick(int iRow, int iCol);
     void DisplayDateTime();
     void ButtonProcess();

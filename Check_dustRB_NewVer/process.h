@@ -230,6 +230,8 @@ public:
     void    StopThread();
     bool    m_bRun;
 
+
+
     int iCam;
     int iModel;
     QStringList ListImage;
