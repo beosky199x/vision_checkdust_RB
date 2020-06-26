@@ -113,7 +113,7 @@ public: /*fuction*/
     void SetStep(int iStep);
     void AddLog(QString str, QColor iColor);
     void WriteLogFileID(QString data);
-    void saveResultImg(QString strIDmd, QString nameCam, Mat img);
+    void saveResultImg(QString strIDmd, QString nameCam, Mat img, bool bType);
 
     QString splitStrCom(QString str);
     vector<QString> GetAllFileInFolder(QString folder);

@@ -1,0 +1,15 @@
+{
+    "dino_device": "0",
+    "excel_out_path": "D:/CheckCenterCamera/Excel/Output/",
+    "ezi_baud": "115200",
+    "ezi_com": "COM4",
+    "ezi_slave_x": "0",
+    "ezi_slave_y": "1",
+    "front1_out_path": "D:/CheckCenterCamera/Front/1/",
+    "front2_out_path": "D:/CheckCenterCamera/Front/2/",
+    "log_out_path": "D:/CheckCenterCamera/Log/",
+    "rear1_out_path": "D:/CheckCenterCamera/Rear/1/",
+    "rear2_out_path": "D:/CheckCenterCamera/Rear/2/",
+    "rear3_out_path": "D:/CheckCenterCamera/Rear/3/",
+    "rear4_out_path": "D:/CheckCenterCamera/Rear/4/"
+}

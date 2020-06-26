@@ -51,7 +51,7 @@ using namespace std;
 #define NUM_HOLE                           4
 #define NUM_CHECKBOX                       10
 #define NUM_LINEDIT                        150
-#define NUM_COMBOBOX                       12
+#define NUM_COMBOBOX                       15
 #define NUM_AT                             11
 #define NUM_ADB                            3
 // define input Module IO
@@ -392,13 +392,25 @@ enum _eCbsymbol {
     _CAP_AF
 };
 
+enum _etypeblur {
+    BLUR,
+    GAUSSIAN,
+    MEDIAN,
+    BOX,
+    BILATERAL,
+    NONLINEARDIFF
+};
+
 enum _ecbbsymbol {
     CAMERA_TYPE,
     NOR_TYPE,
     STAIN_SIZE,
     WSTAIN_SIZE,
     ROI_GLARE,
-    ROI_FOCUS
+    ROI_FOCUS,
+    BLUR_STAIN_TYPE,
+    BLUR_WSTAIN_TYPE,
+    BLUR_GLARE_TYPE
 };
 enum _edtsymbol {
     /* DELAY LINE EDIT*/
@@ -665,6 +677,7 @@ struct _sParameter                          {
     int ipThreshold[NUM_TYPE]                       = {};
     int ipBlockSize[NUM_TYPE]                       = {};
     int ipBlurSize[NUM_TYPE]                        = {};
+    int ipBlurType[NUM_TYPE]                        = {};
     int ipErodeSize[NUM_TYPE]                       = {};
     int ipErodeLoop[NUM_TYPE]                       = {};
     int ipDilateSize[NUM_TYPE]                      = {};
@@ -681,6 +694,7 @@ struct _sParameter                          {
     /* glare checkipg|| ipg: int parameter glare || MS mean / std */
     int ipgThreshold[NUM_ROI]               = {};
     int ipgBlurSize[NUM_ROI]                = {};
+    int ipgBlurType[NUM_ROI]               = {};
     Rect rpRoi[NUM_ROI]                     = {};
     int ipgErodeSize[NUM_ROI]               = {};
     int ipgErodeLoop[NUM_ROI]               = {};

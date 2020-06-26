@@ -1166,9 +1166,9 @@ void ProcessCam::visionColorFW1(int Img) {
 void ProcessCam::ProcessFW1() {
     if(bCheckStain[FW1]){
         pSStain[FW1]->iIMG = IMG_CHECK_STEP1;
-        pLStain[FW1]->iIMG = IMG_CHECK_STEP1;
+//        pLStain[FW1]->iIMG = IMG_CHECK_STEP1;
         pSStain[FW1]->StartThread();
-        pLStain[FW1]->StartThread();
+//        pLStain[FW1]->StartThread();
     }
     else{
         pSStain[FW1]->StopThread();
@@ -1179,9 +1179,9 @@ void ProcessCam::ProcessFW1() {
 
     if(bCheckWhiteStain[FW1]){
         pWhiteSStain[FW1]->iIMG = IMG_CHECK_STEP1;
-        pWhiteLStain[FW1]->iIMG = IMG_CHECK_STEP1;
+//        pWhiteLStain[FW1]->iIMG = IMG_CHECK_STEP1;
         pWhiteSStain[FW1]->StartThread();
-        pWhiteLStain[FW1]->StartThread();
+//        pWhiteLStain[FW1]->StartThread();
     }
     else{
         pWhiteSStain[FW1]->StopThread();
@@ -1225,7 +1225,6 @@ void ProcessCam::ProcessFW1() {
         pFocus[FW1]->StopThread();
         vFocus[FW1].clear();
     }
-
 }
 
 void ProcessCam::ProcessFW1Wait() {
@@ -1283,7 +1282,6 @@ void ProcessCam::ProcessFW1Wait() {
             if(bWrongColor[FW1] && bCheckColor[FW1]){
                 bCheckResultColor[FW1] = true;
                 emit eSetReultTbw(RES_COLOR_FW1,      "OK", Qt::green);
-
             }
             else
                 bCheckResultColor[FW1] = false;
@@ -1295,23 +1293,19 @@ void ProcessCam::ProcessFW1Wait() {
             else
                 bCheckResultFocus[FW1] = false;
 
-
             bCheckCam[FW1] = false;
 
             for(Rect r : vStain[FW1][TYPE_SIZE_SMALL]){
                 cv::rectangle(mImread[FW1][IMG_CHECK_STEP1], r, cv_aqua,  mGenenal.ipPaintThickness);
             }
 
-
             for(Rect r : vStain[FW1][TYPE_SIZE_LARGE]){
                 cv::rectangle(mImread[FW1][IMG_CHECK_STEP1], r, cv_aqua,  mGenenal.ipPaintThickness);
             }
 
-
             for(Rect r : vWhiteStain[FW1][TYPE_SIZE_SMALL]){
                 cv::rectangle(mImread[FW1][IMG_CHECK_STEP1], r, cv_red,    mGenenal.ipPaintThickness);
             }
-
 
             for(Rect r : vWhiteStain[FW1][TYPE_SIZE_LARGE]){
                 cv::rectangle(mImread[FW1][IMG_CHECK_STEP1], r, cv_red,    mGenenal.ipPaintThickness);
@@ -1861,7 +1855,7 @@ void ProcessCam::initThread()
     if(ptrIO != nullptr){
        thread->quit();
        QThread::msleep(1000);
-        delete ptrIO;
+       delete ptrIO;
     }
 
     ptrIO =  new ThreadIO(this->mDevice.qstrComIO);
@@ -1891,12 +1885,19 @@ void ProcessCam::WriteLogFileID(QString data) {
     }
 }
 
-void ProcessCam::saveResultImg(QString strIDmd, QString nameCam, Mat img) {
+void ProcessCam::saveResultImg(QString strIDmd, QString nameCam, Mat img, bool bType) {
 
     if(bSaveImgResize)
         resize(img, img, cv::Size(640,480));
-    QString strFileSave = mDevice.qstrFolderOutput + "/" + strIDmd + "_" + nameCam + ".jpg" ;
-    imwrite(strFileSave.toStdString(), img);
+    if(bType){
+        QString strFileSave = mDevice.qstrFolderOutput + "/" + strIDmd + "_" + nameCam + ".jpg" ;
+        imwrite(strFileSave.toStdString(), img);
+    }
+    else{
+        QString strFileSave = mDevice.qstrFolderOutput + "/NG_" + strIDmd + "_" + nameCam + ".jpg" ;
+        imwrite(strFileSave.toStdString(), img);
+    }
+
 }
 
 
