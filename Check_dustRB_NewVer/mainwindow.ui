@@ -4104,6 +4104,11 @@ border-left-color: rgb(85, 255, 0);</string>
          <property name="text">
           <string/>
          </property>
+         <item>
+          <property name="text">
+           <string>Type</string>
+          </property>
+         </item>
         </item>
         <item>
          <property name="text">
@@ -4193,6 +4198,11 @@ border-left-color: rgb(85, 255, 0);</string>
          <property name="text">
           <string/>
          </property>
+         <item>
+          <property name="text">
+           <string>Type</string>
+          </property>
+         </item>
         </item>
         <item>
          <property name="text">
@@ -4274,6 +4284,11 @@ border-left-color: rgb(85, 255, 0);</string>
          <property name="text">
           <string/>
          </property>
+         <item>
+          <property name="text">
+           <string>Type</string>
+          </property>
+         </item>
         </item>
         <item>
          <property name="text">

@@ -1225,7 +1225,6 @@ void ProcessCam::ProcessFW1() {
         pFocus[FW1]->StopThread();
         vFocus[FW1].clear();
     }
-
 }
 
 void ProcessCam::ProcessFW1Wait() {
@@ -1283,7 +1282,6 @@ void ProcessCam::ProcessFW1Wait() {
             if(bWrongColor[FW1] && bCheckColor[FW1]){
                 bCheckResultColor[FW1] = true;
                 emit eSetReultTbw(RES_COLOR_FW1,      "OK", Qt::green);
-
             }
             else
                 bCheckResultColor[FW1] = false;
@@ -1294,18 +1292,23 @@ void ProcessCam::ProcessFW1Wait() {
             }
             else
                 bCheckResultFocus[FW1] = false;
-
-
             bCheckCam[FW1] = false;
+
+            bool b1, b2 = false;
 
             for(Rect r : vStain[FW1][TYPE_SIZE_SMALL]){
                 cv::rectangle(mImread[FW1][IMG_CHECK_STEP1], r, cv_aqua,  mGenenal.ipPaintThickness);
+                if(!b1)
+                    b1 = true;
             }
 
 
-            for(Rect r : vStain[FW1][TYPE_SIZE_LARGE]){
-                cv::rectangle(mImread[FW1][IMG_CHECK_STEP1], r, cv_aqua,  mGenenal.ipPaintThickness);
+            if(!b1){
+                for(Rect r : vStain[FW1][TYPE_SIZE_LARGE]){
+                    cv::rectangle(mImread[FW1][IMG_CHECK_STEP1], r, cv_aqua,  mGenenal.ipPaintThickness);
+                }
             }
+
 
 
             for(Rect r : vWhiteStain[FW1][TYPE_SIZE_SMALL]){
@@ -1861,7 +1864,7 @@ void ProcessCam::initThread()
     if(ptrIO != nullptr){
        thread->quit();
        QThread::msleep(1000);
-        delete ptrIO;
+       delete ptrIO;
     }
 
     ptrIO =  new ThreadIO(this->mDevice.qstrComIO);

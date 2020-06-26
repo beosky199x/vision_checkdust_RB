@@ -1703,8 +1703,11 @@ void MainWindow::simulatorVision(int iCam, int iModel, QStringList listImage)
         _sResVision stDarkSport;
         _sResVision stColor;
 
+        Mat mOut;
+
         QString name = ui->edtPath->text() +"/"+ filename;
         mIn = cv::imread(name.toStdString());
+
 
         if(mIn.empty()) continue;
 
@@ -1713,13 +1716,19 @@ void MainWindow::simulatorVision(int iCam, int iModel, QStringList listImage)
                 if(!stResStain[TYPE_SIZE_SMALL].bRes && i == TYPE_SIZE_LARGE)
                     continue;
                 stResStain[i] = fVision.CheckStain(mIn, mGeneral[iModel], iCam, i, filename, bDebug);
+                if(!stResStain[i].bRes)
+                    mOut = stResStain[i].mRes.clone();
             }
 
         if(mGeneral[iModel].bOptCheckWhiteStain[iCam])
             for(int i = TYPE_SIZE_SMALL; i<= TYPE_SIZE_LARGE; i++){
-                if(!stResWStain[TYPE_SIZE_SMALL].bRes && i == TYPE_SIZE_LARGE)
+                if(!stResWStain[TYPE_SIZE_SMALL].bRes && i == TYPE_SIZE_LARGE){
                     continue;
+                }
                 stResWStain[i] = fVision.CheckWhiteStain(mIn, mGeneral[iModel], iCam, i, filename, bDebug);
+
+//                if(!stResWStain[i].bRes)
+//                    mOut = stResWStain[i].mRes.clone();
             }
 
         if(mGeneral[iModel].bOptCheckGlare[iCam])
@@ -1734,7 +1743,7 @@ void MainWindow::simulatorVision(int iCam, int iModel, QStringList listImage)
         if(mGeneral[iModel].bOptCheckColor[iCam])
             stColor = fVision.CheckColor(mIn, mGeneral[iModel], iCam, filename, bDebug);
 
-        Mat mOut = mIn.clone();
+
         if(stResStain[TYPE_SIZE_SMALL].bRes && stResStain[TYPE_SIZE_LARGE].bRes &&
                 stResWStain[TYPE_SIZE_SMALL].bRes && stResWStain[TYPE_SIZE_LARGE].bRes &&
                 stGlare.bRes && stFocus.bRes && stDarkSport.bRes && stColor.bRes ){
@@ -3240,6 +3249,13 @@ bool MainWindow::MakeFolder(QString folder) {
 }
 
 void MainWindow::CreatTreePara() {
+
+    m_ComboBox[BLUR_STAIN_TYPE]->addItems(QStringList() << "BLUR" << "GAUSSIAN" << "MEDIAN" << "BOX" << "BILATERAL" << "NONLINEAR DIFF");
+
+    m_ComboBox[BLUR_WSTAIN_TYPE]->addItems(QStringList() << "BLUR" << "GAUSSIAN" << "MEDIAN" << "BOX" << "BILATERAL" << "NONLINEAR DIFF");
+
+    m_ComboBox[BLUR_GLARE_TYPE]->addItems(QStringList() << "BLUR" << "GAUSSIAN" << "MEDIAN" << "BOX" << "BILATERAL" << "NONLINEAR DIFF");
+
     /* add camera setting treewidget*/
     m_ComboBox[CAMERA_TYPE]->addItems(QStringList() << "FRONT/FW1" << "FB1");
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_SETTING_CAMERA),1,m_ComboBox[CAMERA_TYPE]);
@@ -3308,6 +3324,8 @@ void MainWindow::CreatTreePara() {
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_STAIN)->child(0),1,m_LineEdit [STAIN_THRESHOLD]);
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_STAIN)->child(1),1,m_LineEdit [STAIN_BLOCKSIZE]);
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_STAIN)->child(2),1,m_LineEdit [STAIN_BLURSIZE]);
+    ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_STAIN)->child(2)->child(0),1,m_ComboBox[BLUR_STAIN_TYPE]);
+
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_STAIN)->child(3),1,m_LineEdit [STAIN_ERODE_SIZE]);
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_STAIN)->child(4),1,m_LineEdit [STAIN_ERODE_LOOP]);
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_STAIN)->child(5),1,m_LineEdit [STAIN_DILATE_SIZE]);
@@ -3324,6 +3342,9 @@ void MainWindow::CreatTreePara() {
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_WHITESTAIN)->child(0),1,m_LineEdit [WSTAIN_THRESHOLD]);
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_WHITESTAIN)->child(1),1,m_LineEdit [WSTAIN_BLOCKSIZE]);
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_WHITESTAIN)->child(2),1,m_LineEdit [WSTAIN_BLURSIZE]);
+
+    ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_WHITESTAIN)->child(2)->child(0),1,m_ComboBox[BLUR_WSTAIN_TYPE]);
+
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_WHITESTAIN)->child(3),1,m_LineEdit [WSTAIN_ERODE_SIZE]);
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_WHITESTAIN)->child(4),1,m_LineEdit [WSTAIN_ERODE_LOOP]);
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_WHITESTAIN)->child(5),1,m_LineEdit [WSTAIN_DILATE_SIZE]);
@@ -3339,6 +3360,9 @@ void MainWindow::CreatTreePara() {
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_GLARE),1,m_ComboBox[ROI_GLARE]);
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_GLARE)->child(0),1,m_LineEdit[GLARE_THRESHOLD]);
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_GLARE)->child(1),1,m_LineEdit[GLARE_BLUR_SIZE]);
+
+     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_GLARE)->child(1)->child(0),1,m_ComboBox[BLUR_GLARE_TYPE]);
+
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_GLARE)->child(2),1,m_LineEdit[GLARE_ROI1]);
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_GLARE)->child(3),1,m_LineEdit[GLARE_ERODE_SIZE]);
     ui->treeWidget_Parameter->setItemWidget(ui->treeWidget_Parameter->topLevelItem(_PARA_GLARE)->child(4),1,m_LineEdit[GLARE_ERODE_LOOP]);

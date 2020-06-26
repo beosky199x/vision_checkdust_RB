@@ -310,7 +310,7 @@ _sResVision MyVision::CheckStain( const cv::Mat mIn, _sGeneral param, int iCam, 
                               iThresh);
         qDebug()<<"4";
 
-        cvtColor(mAdaptive, sRes.mRes, CV_GRAY2BGR);
+
         qDebug()<<"5";
 
         if(bDebug) {
@@ -398,6 +398,8 @@ _sResVision MyVision::CheckStain( const cv::Mat mIn, _sGeneral param, int iCam, 
             imwrite(strFileSave.toStdString(), mAdaptive);
         }
 
+        cvtColor(mAdaptive, sRes.mRes, CV_GRAY2BGR);
+
 
         Mat structElement = getStructuringElement(MORPH_RECT,Size(param.spStain[iCam].ipErodeSize[iTypeSize], param.spStain[iCam].ipErodeSize[iTypeSize]));
         erode(mAdaptive,mAdaptive,structElement,Point(-1,-1),param.spStain[iCam].ipErodeLoop[iTypeSize]);
@@ -446,7 +448,7 @@ _sResVision MyVision::CheckStain( const cv::Mat mIn, _sGeneral param, int iCam, 
                                        blobRect.height + 2*param.ipPaintOffset);
                 sRes.vRes.push_back(rError);
 
-                rectangle(sRes.mRes, rError, cv_aqua, param.ipPaintThickness);
+//                rectangle(sRes.mRes, rError, cv_aqua, param.ipPaintThickness);
 
 
             }
@@ -500,7 +502,8 @@ _sResVision MyVision::CheckWhiteStain(const cv::Mat mIn,  _sGeneral param, int i
         //invert
         cv::bitwise_not(mInput,mInput);
 
-        mInput +=  mInput;
+//        mInput *=  mInput;
+        mInput *=  1;
 
         if(bDebug) {
             strFileSave = folderSaveWhiteStain + "/1_Blur_bitwise_double" + strFileName;
@@ -508,7 +511,7 @@ _sResVision MyVision::CheckWhiteStain(const cv::Mat mIn,  _sGeneral param, int i
         }
         Mat mAdaptive;
         cv::adaptiveThreshold(mInput, mAdaptive,255, ADAPTIVE_THRESH_MEAN_C,THRESH_BINARY_INV, param.spWhiteStain[iCam].ipBlockSize[iTypeSize], param.spWhiteStain[iCam].ipThreshold[iTypeSize]);
-        cv::cvtColor(mAdaptive, sRes.mRes,CV_GRAY2BGR);
+
 
         if(bDebug) {
             strFileSave = folderSaveWhiteStain + "/2_adaptive" + strFileName;
@@ -579,6 +582,8 @@ _sResVision MyVision::CheckWhiteStain(const cv::Mat mIn,  _sGeneral param, int i
             imwrite(strFileSave.toStdString(), mAdaptive);
         }
 
+        cv::cvtColor(mAdaptive, sRes.mRes,CV_GRAY2BGR);
+
         Mat structElement = getStructuringElement(MORPH_RECT,Size(param.spWhiteStain[iCam].ipErodeSize[iTypeSize], param.spWhiteStain[iCam].ipErodeSize[iTypeSize]));
         erode(mAdaptive, mAdaptive, structElement, Point(-1,-1), param.spWhiteStain[iCam].ipErodeLoop[iTypeSize]);
 
@@ -642,7 +647,6 @@ _sResVision MyVision::CheckWhiteStain(const cv::Mat mIn,  _sGeneral param, int i
 }
 
 _sResVision  MyVision::CheckGlare(const cv::Mat mIn, _sGeneral param, int iCam, QString strFileName, bool bDebug){
-
     _sResVision sRes;
     try{
         QString strFileSave = "";
